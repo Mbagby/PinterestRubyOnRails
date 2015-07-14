@@ -1,0 +1,11 @@
+<h1>All the Pins</h1>
+
+<% @pins.each do |pin| %>
+	<%= pin.name %> :<br />
+	<%= link_to "Edit", edit_pin_path(pin)%>
+	<%= pin.comment %> <br />
+	<%= pin.url %> <br />
+	<img src = "<%= pin.image %>" :<br />
+<% end %>
+
+<%= link_to "Add New Pin", new_pin_path%>
